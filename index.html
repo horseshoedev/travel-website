@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>California Tourism</title>
+  <!-- Favicon -->
+  <link href="./assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <!--  Map JS -->
+  <script src="./assets/js/maps.js"></script>
+</head>
+
+<body>
+  <!-- nav bar code -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">Home</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./team.html">The Team</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron center">
+          <!--Travel image-->
+          <img src="./assets/images/ontheroadlogo.jpg" alt="traveling hichhiker" class="img-responsive center">
+
+          <p class="center">View the most popular travel destinations</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal Grid-->
+  <div class="container-fluid">
+    <div class="row">
+      <!--Yosemite-->
+      <div class="col-md-6 center">
+        <h3>Yosemite National Park</h3>
+        <!--Yosemite Image-->
+        <img src="./assets/images/yosemite.jpg" alt="Yosemite" class="img-responsive img-circle photo">
+        <!-- view modal -->
+        <button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#fsModal">Yosemite Details</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="YosemiteDetailsModalLabel" class="modal-title">
+                  Yosemite Details
+                </h1>
+              </div>
+              <!-- header -->
+              <!-- body -->
+              <div class="modal-body">
+                <!-- Weather -->
+                <div id="openweathermap-widget-23-1" class="weather-container"></div>
+                <script>
+                  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                  window.myWidgetParam.push({
+                    id: 23,
+                    cityid: '4298003',
+                    appid: 'e5907fb3d33363041fad1e9d19229350',
+                    units: 'imperial',
+                    containerid: 'openweathermap-widget-23-1',
+                  });
+                  (function () {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src =
+                      "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                  })();
+                </script>
+                <h2>Parks, Campgrounds, Hiking</h2>
+                <p>Not just a great valley, but a shrine to human foresight, the strength of granite, the power of
+                  glaciers, the persistence of life, and the tranquility of the High Sierra. First protected in 1864,
+                  Yosemite National Park is best known for
+                  its waterfalls, but within its nearly 1,200 square miles, you can find deep valleys, grand meadows,
+                  ancient giant sequoias, a vast wilderness area, and much more.</p>
+                <h2>Get in touch</h2>
+                <p>Mailing Address: PO Box 577 Yosemite National Park, CA 95389</p>
+                <p>
+                  Phone: (209) 372-0200</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+
+        <!-- Trigger the small Events modal with a button -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Things to see</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Do not miss list</h1>
+              </div>
+              <div class="modal-body">
+                <!--Calendar Button-->
+                <script>
+                  function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                  }
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                </script>
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                  crossorigin="anonymous">
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    Add to Calendar</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#"> <i class="fa fa-apple" aria-hidden="true"></i> Apple calendar</a>
+                    <a href="#"> <i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                    <a href="#"> <i class="fa fa-windows" aria-hidden="true"></i> Outlook</a>
+                    <a href="#"><i class="fa fa-yahoo" aria-hidden="true"></i> Yahoo</a>
+                  </div>
+                </div>
+                <h3>Bridalveil Fall Trail</h3>
+                <p>A short walk will lead you to the base of Bridalveil Fall, allowing you to get an up close view of
+                  this often-windswept waterfall.</p>
+                <p>Begin at: Bridalveil Fall Parking Area
+                  Distance: 0.5 mi (0.8 km) round trip
+                  Time: 20 minutes</p>
+
+                <h3>Lower Yosemite Fall Trail</h3>
+                <p>Delight in stunning views of Yosemite Falls in its entirety, with the opportunity to walk to the base
+                  of the lower fall; it roars in spring but falls silent by late summer.</p>
+                <p>Begin at: Lower Yosemite Fall Trailhead (shuttle stop #6)
+                  Distance: 1 mile (1.6 km) loop
+                  Time: 30 minutes</p>
+
+                <h3>Cook's Meadow Loop</h3>
+                <p>Walk through the heart of it all! Enjoy views of Yosemite Falls, Half Dome, Sentinel Rock, and Royal
+                  Arches from the center of Yosemite Valley as you saunter through this large open meadow.</p>
+                <p>Begin at: Yosemite Valley Visitor Center (shuttle stop #5 or #9) Cook's Meadow is also accessible
+                  from shuttle stop #11 (near Sentinel Bridge) or shuttle stop #6 (Lower Yosemite Fall Trailhead)
+                  Distance: 1 mile (1.6 km) loop
+                  Time: 30 minutes</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Accomedations-->
+        <!-- view modal -->
+        <button class="btn btn-info btn-modal" data-toggle="modal" data-target="#fsModal7">Accomedations</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal7" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="YosemiteAccomedationsModalLabel" class="modal-title">
+                  Yosemite Accomedations
+                </h1>
+              </div>
+              <!-- header -->
+              <img src="./assets/images/hotel-icon.png" alt="hotel icon">
+              <!-- body -->
+              <div class="modal-body">
+                <h4>Eating</h4>
+                <p>
+                  Yosemite has numerous restaurants and other dining options all year in Yosemite Valley and seasonally
+                  at Wawona, Yosemite Ski & Snowboard Area (formerly Badger Pass), Glacier Point, White Wolf, and
+                  Tuolumne Meadows. Additionally, groceries are available all year in Yosemite Valley, Wawona, Crane
+                  Flat, and El Portal, and seasonally at Tuolumne Meadows.
+                </p>
+                <br>
+                <h4>Camping</h4>
+                <p>Yosemite National Park has 13 campgrounds; some are reservable while others operate on a first-come,
+                  first-served basis. From about April through October, reservations can be very difficult to get and
+                  the first-come, first-served campgrounds often fill up early each day. Learn more about campground
+                  reservations, camping without a reservation, details about each campground, camping with an RV, and
+                  campground regulations. Information about Yosemite Hospitality's High Sierra Camps is also available.
+                </p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+      </div>
+
+      <!--Hollywood-->
+      <div class="col-md-6 center">
+        <h3>Hollywood, CA</h3>
+        <!--Hollywood Image-->
+        <img src="./assets/images/hollywood.jpg" alt="Hollywood" class="img-responsive img-circle photo">
+        <!-- view modal -->
+        <button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#fsModal2">Hollywood Details</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal2" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="HollywoodDetailsModalLabel" class="modal-title">
+                  Hollywood Details
+                </h1>
+              </div>
+              <!-- header -->
+              <!-- body -->
+              <div class="modal-body">
+                <!-- Weather -->
+                <div id="openweathermap-widget-23-2" class="weather-container"></div>
+                <script>
+                  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                  window.myWidgetParam.push({
+                    id: 23,
+                    cityid: '5368361',
+                    appid: 'e5907fb3d33363041fad1e9d19229350',
+                    units: 'imperial',
+                    containerid: 'openweathermap-widget-23-2',
+                  });
+                  (function () {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src =
+                      "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                  })();
+                </script>
+                <h2>About</h2>
+                <p>Hollywood is a neighborhood in the central region of Los Angeles, California, notable as the home of
+                  the U.S. film industry, including several of its historic studios.Its name has come to be a shorthand
+                  reference for the industry and the
+                  people associated with it.</p>
+                <h2>Get in Touch</h2>
+                <p>Address: 6801 Hollywood Blvd, Los Angeles, CA 90028</p>
+                <p>Phone: +1-323-467-6412</p>
+                <p>Hours: 9:00am-10:00pm</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+
+        <!-- Trigger the Events modal with a button -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal2">Things to do</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Do not miss list</h1>
+              </div>
+              <div class="modal-body">
+                <!--Calendar Button-->
+                <script>
+                  function myFunction2() {
+                    document.getElementById("myDropdown2").classList.toggle("show");
+                  }
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                </script>
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                  crossorigin="anonymous">
+                <div class="dropdown">
+                  <button onclick="myFunction2()" class="dropbtn"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    Add to Calendar</button>
+                  <div id="myDropdown2" class="dropdown-content">
+                    <a href="#"> <i class="fa fa-apple" aria-hidden="true"></i> Apple calendar</a>
+                    <a href="#"> <i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                    <a href="#"> <i class="fa fa-windows" aria-hidden="true"></i> Outlook</a>
+                    <a href="#"><i class="fa fa-yahoo" aria-hidden="true"></i> Yahoo</a>
+                  </div>
+                </div>
+                <h3>Watch the sunset from the tallest open-air bar in the Western Hemisphere</h3>
+                <p>Summer is here, and it’s time to sip cocktails at Spire 73, located on the 73rd floor of the
+                  InterContinental Hotel Los Angeles Downtown. This upscale rooftop terrace boasts 360-degree city views
+                  and the drinks are pretty special, too.
+                  Grab a window seat, order a Dorian Gray (gin, lime, pineapple, tarragon, passion fruit, rhubarb
+                  bitters) and Tableside S’mores, and watch the sun as it sets over L.A.</p>
+                <p>Address: 2151 Avenue Of The Stars, Los Angeles, CA 90067</p>
+                <p> Phone: +1-310-284-6500</p>
+
+                <h3>Check out "Dark Arts at Hogwarts Castle" and the new Jurassic World ride at Universal Studios
+                  Hollywood</h3>
+                <p>Live out your Harry Potter fantasies at the Dark Arts at Hogwarts™ Castle show, which debuted at
+                  Universal Studios Hollywood in April. Dementors™, Death Eaters™, and even the unfathomably evil Lord
+                  Voldemort™ all make an appearance in
+                  this spectacle to end all spectacles. </p>
+                <p>Address: 100 Universal City Plz, Universal City, CA 91608</p>
+                <p>Phone: +1-800-864-8377</p>
+
+                <h3>Test your limits with West Coast Racers at Six Flags Magic Mountain</h3>
+                <p>Dubbed the "Thrill Capital of the World," Six Flags Magic Mountain is well known for classic thrill
+                  rides like Superman: Ride of Steel, The Joker’s Jinx and Mind Eraser. But a new race car-themed
+                  rollercoaster, West Coast Racers promises
+                  to raise adrenaline levels this summer. Reaching speeds of 55 miles per hour, this unique side-by-side
+                  ride is an L.A. experience not to be missed.</p>
+                <p>Address: 26101 Magic Mountain Pkwy, Valencia, CA 91355</p>
+                <p> Phone: +1-661-255-4100</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Accomedations-->
+        <!-- view modal -->
+        <button class="btn btn-info btn-modal" data-toggle="modal" data-target="#fsModal8">Accomedations</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal8" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="HollywoodAccomedationsModalLabel" class="modal-title">
+                  Hollywood Accomedations
+                </h1>
+              </div>
+              <!-- header -->
+              <img src="./assets/images/hotel-icon.png" alt="hotel icon">
+              <!-- Body -->
+              <h4>El Royale Hotel - Near Universal Studios Hollywood</h4>
+              <p>El Royale Hotel - Near Universal Studios Hollywood is set in the Studio City district in Los Angeles,
+                3.1 mi from Hollywood Bowl. Free WiFi is provided throughout the property and free private parking is
+                available on site.Every air-conditioned room comes with a flat-screen cable TV. There are also
+                microwaves, refrigerators,
+                and coffee/tea makers available.
+                A complimentary continental breakfast is available to guests.</p>
+              <br>
+              <h4>Space Pods Hollywood - Coed Living B&B</h4>
+              <p>Located in Los Angeles, 1.5 miles from Los Angeles County Museum Of Art (LACMA) and 5 miles from
+                Natural History Museum of Los Angeles County, Space Pods Hollywood - Coed Living B&B provides
+                accommodations with free WiFi, air conditioning, an outdoor swimming pool and a garden.There's a seating
+                and/or dining area in some units.
+                Guests can also relax in the shared lounge area.
+                Melrose Avenue is 2.8 miles from the bed and breakfast, while Hollywood Walk of Fame is 4 miles away.
+                The nearest airport is Los Angeles International Airport, 10 miles from Space Pods Hollywood.</p>
+              <!-- body -->
+              <div class="modal-body">
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+      </div>
+    </div>
+    <!--Redwood -->
+    <div class="row">
+      <div class="col-md-6 center">
+        <h3>Redwood National Park</h3>
+        <!--Redwood Image-->
+        <img src="./assets/images/redwood.jpg" alt="Redwood" class="img-responsive img-circle photo">
+        <!-- view modal -->
+        <button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#fsModal3">Redwood details</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal3" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="RedwoodDetailsModalLabel" class="modal-title">
+                  Redwood Details
+                </h1>
+              </div>
+              <!-- header -->
+              <!-- body -->
+              <div class="modal-body">
+                <!-- Weather -->
+                <div id="openweathermap-widget-23-3" class="weather-container"></div>
+                <script>
+                  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                  window.myWidgetParam.push({
+                    id: 23,
+                    cityid: '5570160',
+                    appid: 'e5907fb3d33363041fad1e9d19229350',
+                    units: 'imperial',
+                    containerid: 'openweathermap-widget-23-3',
+                  });
+                  (function () {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src =
+                      "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                  })();
+                </script>
+                <h2>About</h2>
+                <p>Most people know Redwood as home to the tallest trees on Earth. The parks also protect vast prairies,
+                  oak woodlands, wild river-ways, and nearly 40-miles of rugged coastline. For thousands of years people
+                  have lived in this verdant landscape.
+                  Together, the National Park Service and California State Parks are managing and restoring these lands
+                  for the inspiration, enjoyment, and education of all.</p>
+                <h2>Get in touch</h2>
+                <p>Mailing Address: 1111 Second Street Crescent City, CA 95531
+                </p>
+                <p>Phone: (707) 464-6101</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+
+        <!-- Trigger the Things to see modal with a button -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3">Things to see</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal3" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Do not miss list</h1>
+              </div>
+              <div class="modal-body">
+                <!--Calendar Button-->
+                <script>
+                  function myFunction3() {
+                    document.getElementById("myDropdown3").classList.toggle("show");
+                  }
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                </script>
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                  crossorigin="anonymous">
+                <div class="dropdown">
+                  <button onclick="myFunction3()" class="dropbtn"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    Add to Calendar</button>
+                  <div id="myDropdown3" class="dropdown-content">
+                    <a href="#"> <i class="fa fa-apple" aria-hidden="true"></i> Apple calendar</a>
+                    <a href="#"> <i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                    <a href="#"> <i class="fa fa-windows" aria-hidden="true"></i> Outlook</a>
+                    <a href="#"><i class="fa fa-yahoo" aria-hidden="true"></i> Yahoo</a>
+                  </div>
+                </div>
+                <h3>Klamath River Overlook</h3>
+                <p>Drive to Klamath River Overlook, a prime spot for watching the gray whale migration. Look for other
+                  marine mammals and a host of seabirds any time of year.</p>
+                <p>Hike ¼ mile down a steep trail to the lower overlook and more dramatic views.</p>
+                <h3>Coastal Drive</h3>
+                <p>Get off the beaten path and onto Coastal Drive (motorhomes and trailers are prohibited on gravel
+                  section).</p>
+                <p>This 8-mile road winds past expansive Pacific Ocean views, the World War II Radar Station, and
+                  Highbluff Overlook. Look through binoculars at the massive off shore rocks to spy thousands of
+                  seabirds nesting.</p>
+                <h3>Newton B. Drury Scenic Parkway</h3>
+                <p>Travel Newton B. Drury Scenic Parkway. Not even the Avenue of the Giants can beat this!</p>
+                <p>A 10-mile scenic drive through ancient redwoods. Stop and walk an 1/8 of a mile to Big Tree;
+                  you'll see why! Watch for Roosevelt elk grazing in the prairie.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Accomedations-->
+        <!-- view modal -->
+        <button class="btn btn-info btn-modal" data-toggle="modal" data-target="#fsModal9">Accomedations</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal9" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="RedwoodAccomedationsModalLabel" class="modal-title">
+                  Redwood Accomedations
+                </h1>
+              </div>
+              <!-- header -->
+              <img src="./assets/images/hotel-icon.png" alt="hotel icon">
+              <!-- body -->
+              <div class="modal-body">
+                <p>We know you need a place to eat and sleep.
+                  However, there are no restaurants or lodging facilities within Redwood National and State Parks
+                  boundaries.</p>
+                <p>Towns like Crescent City, Klamath and Orick are adjacent to the park - and they have plenty to offer.
+                  Within an hour's drive of the park are other towns like Grants Pass, Trinidad, McKinleyville, Arcata
+                  and Eureka.</p>
+                <p>Plenty of private, public and state lands offer camping options in the area too.</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+      </div>
+
+      <!--Joshua Tree-->
+      <div class="col-md-6 center">
+        <h3>Joshua Tree National Park</h3>
+        <!--Joshua Tree Image-->
+        <img src="./assets/images/joshua-tree.jpg" alt="Joshua Tree" class="img-responsive img-circle photo">
+        <!-- view modal -->
+        <button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#fsModal4">Joshua Tree
+          Details</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal4" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="JoshuaTreeDetailsModalLabel" class="modal-title">
+                  Joshua Tree Details
+                </h1>
+              </div>
+              <!-- header -->
+              <!-- body -->
+              <div class="modal-body">
+                <!-- Weather -->
+                <div id="openweathermap-widget-23-4" class="weather-container"></div>
+                <script>
+                  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                  window.myWidgetParam.push({
+                    id: 23,
+                    cityid: '5361298',
+                    appid: 'e5907fb3d33363041fad1e9d19229350',
+                    units: 'imperial',
+                    containerid: 'openweathermap-widget-23-4',
+                  });
+                  (function () {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src =
+                      "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                  })();
+                </script>
+                <h2>Where two deserts meet</h2>
+                <p>Two distinct desert ecosystems, the Mojave and the Colorado, come together in Joshua Tree National
+                  Park. A fascinating variety of plants and animals make their homes in a land sculpted by strong winds
+                  and occasional torrents of rain. Dark
+                  night skies, a rich cultural history, and surreal geologic features add to the wonder of this vast
+                  wilderness in southern California. Come explore for yourself.</p>
+                <h2>Get in touch :</h2>
+                <p>Mailing Address: 74485 National Park Drive Twentynine Palms, CA 92277-3597</p>
+                <p>Phone: (760) 367-5500</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+
+        <!-- Trigger the things to see modal with a button -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal4">Things to see</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal4" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Do not miss list</h1>
+              </div>
+              <div class="modal-body">
+                <!--Calendar Button-->
+                <script>
+                  function myFunction4() {
+                    document.getElementById("myDropdown4").classList.toggle("show");
+                  }
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                </script>
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                  crossorigin="anonymous">
+                <div class="dropdown">
+                  <button onclick="myFunction4()" class="dropbtn"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    Add to Calendar</button>
+                  <div id="myDropdown4" class="dropdown-content">
+                    <a href="#"> <i class="fa fa-apple" aria-hidden="true"></i> Apple calendar</a>
+                    <a href="#"> <i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                    <a href="#"> <i class="fa fa-windows" aria-hidden="true"></i> Outlook</a>
+                    <a href="#"><i class="fa fa-yahoo" aria-hidden="true"></i> Yahoo</a>
+                  </div>
+                </div>
+                <h3>Bajada</h3>
+                <p>Loop. Walk on a bajada and discover plants of the Colorado Desert on this easy path. South of
+                  Cottonwood Visitor Center; 0.5 mile (0.8 km) north of the South Entrance</p>
+                <p>0.25 mile (0.4 km) 20 feet (6.1 m) ~ 15-20 minutes</p>
+                <h3>Barker Dam</h3>
+                <p>Barker Dam parking area. Loop. Explore cultural history and view a water tank built by early cattle
+                  ranchers. Watch for bighorn sheep.</p>
+                <p>1.1 miles (1.8 km) 50 feet (15.2 m) ~ 1 hour</p>
+                <h3>Cottonwood Spring</h3>
+                <p>Short walk to fan palm oasis with cottonwood trees. Fantastic birding location with plentiful shade.
+                </p>
+                <p>1 mile (1.5 km) east of Cottonwood Visitor Center
+                  0.1 mile (0.2 km) 25 feet (7.6 m) ~ 10 minutes</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Accomedations-->
+        <!-- view modal -->
+        <button class="btn btn-info btn-modal" data-toggle="modal" data-target="#fsModal10">Accomedations</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal10" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="JoshuaTreeAccomedationsModalLabel" class="modal-title">
+                  Joshua Tree Accomedations
+                </h1>
+              </div>
+              <!-- header -->
+              <img src="./assets/images/hotel-icon.png" alt="hotel icon">
+              <!-- body -->
+              <div class="modal-body">
+                <h4>Camping</h4>
+                <p>There are also a number of options for camping outside of the park.
+                  If you're looking for self-sustained, off in the backcountry experiences, check out our backpacking
+                  page.</p>
+                <br>
+                <h4>Restaurants, Grocery Stores, & Picnic Areas</h4>
+                <p>There are no restaurants or grocery stores inside Joshua Tree National Park, but nearby communities
+                  provide these services. Check with area chambers of commerce for more information.</p>
+
+                <p>Joshua Tree has eight picnic areas: Cottonwood, Indian Cove, Live Oak, Split Rock, Cap Rock, Hidden
+                  Valley, Quail Springs, and Black Rock. Their locations are shown on the map below.</p>
+
+                <p>Remember: help us keep wildlife wild. Never feed wild animals.
+                  Store food in hard-sided containers or in your vehicle.
+                  Carefully clean up all trash and leftovers, even small crumbs.</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+      </div>
+      <!-- row -->
+    </div>
+
+    <!--Death Valley-->
+    <div class="row">
+      <div class="col-md-6 center">
+        <h3>Death Valley National Park</h3>
+        <!--Death Valley Image-->
+        <img src="./assets/images/death-valley.jpg" alt="Death valley" class="img-responsive img-circle photo">
+
+        <!-- view modal -->
+        <button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#fsModal5">Death Valley
+          Details</button>
+
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal5" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="DeathValleyDetailsModalLabel" class="modal-title">
+                  Death Valley Details
+                </h1>
+              </div>
+              <!-- header -->
+              <!-- body -->
+              <div class="modal-body">
+                <div class="center">
+                  <div id="openweathermap-widget-23-5" class="weather-container"></div>
+                  <script>
+                    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                    window.myWidgetParam.push({
+                      id: 23,
+                      cityid: '5394124',
+                      appid: 'e5907fb3d33363041fad1e9d19229350',
+                      units: 'imperial',
+                      containerid: 'openweathermap-widget-23-5',
+                    });
+                    (function () {
+                      var script = document.createElement('script');
+                      script.async = true;
+                      script.charset = "utf-8";
+                      script.src =
+                        "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                      var s = document.getElementsByTagName('script')[0];
+                      s.parentNode.insertBefore(script, s);
+                    })();
+                  </script>
+                </div>
+                <h2>About Death Valley</h2>
+                <p>Death Valley National Park is an American national park that straddles the California—Nevada border,
+                  east of the Sierra Nevada.The park boundaries include Death Valley, the northern section of Panamint
+                  Valley, the southern section of Eureka
+                  Valley, and most of Saline Valley.</p>
+                <h2>Get in touch</h2>
+                <p>Mailing Address: P.O. Box 579 Death Valley, CA 92328</p>
+                <p> Phone: (760) 786-3200</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+
+
+        <!-- Trigger the Things to do modal with a button -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal6">Things to
+          do</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal6" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Do not miss list</h1>
+              </div>
+              <div class="modal-body">
+                <!-- Calendar Button-->
+                <script>
+                  function myFunction5() {
+                    document.getElementById("myDropdown5").classList.toggle("show");
+                  }
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                </script>
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                  crossorigin="anonymous">
+                <div class="dropdown">
+                  <button onclick="myFunction5()" class="dropbtn"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    Add to Calendar</button>
+                  <div id="myDropdown5" class="dropdown-content">
+                    <a href="#"> <i class="fa fa-apple" aria-hidden="true"></i> Apple calendar</a>
+                    <a href="#"> <i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                    <a href="#"> <i class="fa fa-windows" aria-hidden="true"></i> Outlook</a>
+                    <a href="#"><i class="fa fa-yahoo" aria-hidden="true"></i> Yahoo</a>
+                  </div>
+                </div>
+                <h3>Badwater Basin </h3>
+                <p>The lowest point in North America, at 282 ft (86 m) below sea level, a surreal landscape of vast salt
+                  flats. You can see the salt flat from your vehicle. A short walk would take you onto the salt flats.
+                </p>
+                <p>17 mi (27 km) south on Badwater Road 30 minutes one way </p>
+                <h3>Artists Drive </h3>
+                <p> A scenic loop drive through multi-hued hills. Enjoy the views from your vehicle. A short stop at
+                  Artists Palette would require exiting your
+                  vehicle.</p>
+                <p>The 9 mile (14.5 km) drive is one-way; open to vehicles less than 25 ft (7.6 m) in total length.
+                  Entrance to the one way road is 8.5 mi (13.7 km) south on Badwater Road 15 minutes one way to entrance
+                </p>
+                <h3>Zabriskie Point</h3>
+                <p>Golden colored badlands and a spectacular spot for sunrise. A 1/4 mi (400 m) distance, 60 ft (18 m)
+                  elevation gain walk up a paved path to the viewpoint from
+                  the parking area.</p>
+                <p> 4.8 mi (7.7 km) east on Highway 190 15 minutes one way</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Accomedations-->
+        <!-- view modal -->
+        <button class="btn btn-info btn-modal" data-toggle="modal" data-target="#fsModal11">Accomedations</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal11" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="DeathValleyAccomedationsModalLabel" class="modal-title">
+                  Death Valley Accomedations
+                </h1>
+              </div>
+              <!-- header -->
+              <img src="./assets/images/hotel-icon.png" alt="hotel icon">
+              <!-- body -->
+              <div class="modal-body">
+                <h4>Lodging Inside the Park</h4>
+                <p>Death Valley is a big place - 3.4 million acres! It is also remote. Driving distances between
+                  sightseeing and lodging can be long. When picking a place to sleep, visitors should consider the
+                  location of the lodging and what parts of the park they want to visit. Check out the park map for more
+                  information about where these places are located.</p>
+                <br>
+                <h4>Restaurants/Food Available in the Park</h4>
+                <br>
+                <h5>The Inn Restaurant</h5>
+                <ul>
+                  <li>Breakfast 7:30 a.m.–10:30 a.m.</li>
+                  <li>Lunch 11:30 a.m.–2:30 p.m.</li>
+                  <li>Dinner 6:00 p.m.–10:00 p.m.</li>
+                  <li>Dinner Reservations are Recommended</li>
+                </ul>
+                <br>
+                <h5>Date Grove Diner</h5>
+                <ul>
+                  <li>Breakfast 6:00 a.m.–11:00 a.m</li>
+                  <li>Lunch / Dinner 11:30 a.m.–10:00 p.m</li>
+                </ul>
+                <br>
+                <h5>Date Grove Bar</h5>
+                <ul>
+                  <li>11:00 a.m.–11:00 p.m</li>
+                </ul>
+                <br>
+                <h5>General Store & Golf Pro Shop</h5>
+                <ul>
+                  <li>7:00 a.m.– 9:00 p.m</li>
+                </ul>
+                <br>
+                <h5>Toll Road Restaurant</h5>
+                <ul>
+                  <li>Breakfast, lunch and dinner served in a casual setting.</li>
+                  <li>Breakfast: 7:00 a.m. - 10:00 a.m.</li>
+                  <li>Dinner: 7:00 p.m. - 9:00 p.m.</li>
+                </ul>
+                <br>
+                <h5>General Store: ATM, groceries, ice, camping supplies, gifts, and firewood.</h5>
+                <ul>
+                  <li>7:00 a.m. - 10:00 p.m. daily</li>
+                </ul>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+      </div>
+
+      <!--Santa Cruz-->
+      <div class="col-md-6 center">
+        <h3> Santa Cruz, CA</h3>
+        <!--Santa Cruz Image-->
+        <img src="./assets/images/santacruz.jpg" alt="Santa Cruz" class="img-responsive img-circle photo">
+        <!-- view modal -->
+        <button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#fsModal6">Santa Cruz
+          Details</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal6" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="SantaCruzDetailsModalLabel" class="modal-title">
+                  Santa Cruz Details
+                </h1>
+              </div>
+              <!-- header -->
+              <!-- body -->
+              <div class="modal-body">
+                <!-- Weather -->
+                <div id="openweathermap-widget-23-6" class="weather-container"></div>
+                <script>
+                  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                  window.myWidgetParam.push({
+                    id: 23,
+                    cityid: '5393052',
+                    appid: 'e5907fb3d33363041fad1e9d19229350',
+                    units: 'imperial',
+                    containerid: 'openweathermap-widget-23-6',
+                  });
+                  (function () {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src =
+                      "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                  })();
+                </script>
+                <h2>About Santa Cruz</h2>
+                <p>Santa Cruz is known for its moderate climate, natural environment, coastline, redwood forests,
+                  alternative community lifestyles, and socially liberal leanings. It is also home to the University
+                  of
+                  California, Santa Cruz, a premier research
+                  institution and educational hub, as well as the Santa Cruz Beach Boardwalk, an oceanfront amusement
+                  park operating continuously since 1907.</p>
+                <h2>Get in Touch</h2>
+                <p>303 Water Street, Suite 100 Santa Cruz, CA 95060</p>
+                <p>800.833.3494 or 831.425.1234</p>
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+
+        <!-- Trigger the Things to do modal with a button -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal5">Things to
+          See</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal5" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Do not miss list</h1>
+              </div>
+              <div class="modal-body">
+                <!-- Calendar Button-->
+                <script>
+                  function myFunction6() {
+                    document.getElementById("myDropdown6").classList.toggle("show");
+                  }
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                </script>
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                  crossorigin="anonymous">
+                <div class="dropdown">
+                  <button onclick="myFunction6()" class="dropbtn"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    Add to Calendar</button>
+                  <div id="myDropdown6" class="dropdown-content">
+                    <a href="#"> <i class="fa fa-apple" aria-hidden="true"></i> Apple calendar</a>
+                    <a href="#"> <i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                    <a href="#"> <i class="fa fa-windows" aria-hidden="true"></i> Outlook</a>
+                    <a href="#"><i class="fa fa-yahoo" aria-hidden="true"></i> Yahoo</a>
+                  </div>
+                </div>
+                <h3>Roaring Camp Railroads</h3>
+                <p>See California’s towering redwood trees from two historic railroads. Travel on authentic 19th
+                  century
+                  steam trains through the Big Trees to the summit of Bear Mountain. Or ride early 1900s Pullman cars
+                  and open-air excursion cars along
+                  a scenic river gorge through Henry Cowell Redwoods State Park to the beach of Santa Cruz.
+                  <p>
+                    5401 Graham Hill Road
+                    Felton, CA 95018
+                    831.335.4484 </p>
+                  <p>roaringcamp.com </p>
+
+
+                  <!--ANO NUEVO STATE PARK-->
+                  <h3>ANO NUEVO STATE PARK</h3>
+                  <p>Elephant seal breeding colonies, major migrating bird route and rich in cultural history.
+                    Naturalist-led elephant seal tours held December-March by ticket only. Reservations begin in Oct.
+                    800.444.4445. Self-guided access available April-November
+                    by permit only (avail. at the park). Other seals present all year. Info: 650-879-0227
+                    <p>
+                      1 New Years Creek Rd.
+                      Pescadero, CA 94060
+                      650.879.2025 (Kiosk) </p>
+                    <p> parks.ca.gov
+                    </p>
+
+                    <!--MONTEREY BAY NATIONAL MARINE SANCTUARY EXPLORATION CENTER-->
+                    <h3>MONTEREY BAY NATIONAL MARINE SANCTUARY EXPLORATION CENTER</h3>
+                    <p>The free admission Monterey Bay National Marine Sanctuary Exploration Center is just steps from
+                      the Santa Cruz Wharf and Beach Boardwalk. The Exploration Center features engaging interactive
+                      and
+                      multimedia exhibits to immerse you in the
+                      remarkable underwater environment of the sanctuary. Visitors can drive an underwater
+                      submersible,
+                      feed a turtle jellyfish and guide it on its journey across the Pacific or go anywhere in the
+                      world
+                      via Google’s Liquid Galaxy. It’s a wonderful
+                      experience for families and is enjoyed by all ages!
+                      <p>
+                        35 Pacific Avenue
+                        Santa Cruz, CA 95060
+                        831.421.9993 </p>
+                      <p> montereybay.noaa.gov
+                      </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Accomedations-->
+        <!-- view modal -->
+        <button class="btn btn-info btn-modal" data-toggle="modal" data-target="#fsModal12">Accomedations</button>
+        <!-- view modal -->
+        <!-- modal -->
+        <div id="fsModal12" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <!-- dialog -->
+          <div class="modal-dialog">
+            <!-- content -->
+            <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                <h1 id="SantaCruzAccomedationsModalLabel" class="modal-title">
+                  Santa Cruz Accomedations
+                </h1>
+              </div>
+              <!-- header -->
+              <img src="./assets/images/hotel-icon.png" alt="hotel icon">
+              <!-- body -->
+              <div class="modal-body">
+                <h4> Sea and sand inn</h4>
+                <p>Within a 10-minute walk of Santa Cruz Wharf and Boardwalk, this hotel features rooms with free
+                  Wi-Fi.
+                  It has a 24-hour front desk and free guest parking.
+                  A TV and a DVD player are featured in each room at Sea & Sand Inn. All rooms provide a sitting area
+                  and a private bathroom. Each room offers a sea view.
+                  Guests at Inn Sea & Sand can enjoy a daily continental breakfast with fresh baked goods, boiled
+                  eggs,
+                  yogurt, fresh fruit salad, coffee, tea and juices.</p>
+                <br>
+                <h4>Hotel Fairfield Inn & Suites Santa Cruz</h4>
+                <p>This Capitola hotel is a 10-minute drive from central Santa Cruz and New Brighton State Beach. It
+                  features an outdoor pool, and spacious suites with 32-inch flat-screen TVs and an iPod dock.
+                  A microwave, mini-fridge and coffee-maker are standard in every modern suite at the Fairfield Inn
+                  and
+                  Suites Santa Cruz-Capitola. All suites include free Wi-Fi and a sitting area with sofa bed.
+                  A daily buffet breakfast is served at the Santa Cruz Fairfield Inn. It has hot and cold items, as
+                  well
+                  as coffee, tea and juice.</p>
+                <br>
+                <h4>Pacific Blue Inn</h4>
+                <p>Just 10 minutes’ walk from the Santa Cruz Beach Boardwalk, this eco-friendly hotel offers rooms
+                  with
+                  attached bathroom with flat-screen cable TVs and iPod docking stations. Free guest parking is
+                  available.
+                  Free WiFi is available in all of the rooms at the 100% nonsmoking Pacific Blue Inn. The
+                  brightly-colored rooms are also equipped with a DVD player, an electric fireplace and a work desk.
+                  The Pacific Blue Inn offers complimentary baked goods and coffee available for guests throughout the
+                  day.</p>
+
+              </div>
+              <!-- body -->
+              <!-- footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+              <!-- footer -->
+            </div>
+            <!-- content -->
+          </div>
+          <!-- dialog -->
+        </div>
+        <!-- modal -->
+      </div>
+      <!-- Col -->
+    </div>
+    <!-- row -->
+  </div>
+  <!-- container -->
+
+  <!-- Auto Complete -->
+  <div class="container-fluid" id="mapsection">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="pac-card" id="pac-card">
+          <div class="">
+            <div id="title">
+              Search
+            </div>
+            <div id="type-selector" class="pac-controls">
+              <input type="radio" name="type" id="changetype-all" checked="checked">
+              <label for="changetype-all">All</label>
+
+              <input type="radio" name="type" id="changetype-establishment">
+              <label for="changetype-establishment">Establishments</label>
+
+              <input type="radio" name="type" id="changetype-address">
+              <label for="changetype-address">Addresses</label>
+
+              <input type="radio" name="type" id="changetype-geocode">
+              <label for="changetype-geocode">Geocodes</label>
+            </div>
+            <div id="strict-bounds-selector" class="pac-controls">
+              <input type="checkbox" id="use-strict-bounds" value="">
+              <label for="use-strict-bounds">Strict Bounds</label>
+            </div>
+          </div>
+          <div id="pac-container">
+            <input id="pac-input" type="text" placeholder="Search for a location">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- Map -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="map"></div>
+        <div id="infowindow-content">
+          <img src="" width="16" height="16" id="place-icon" alt="map">
+          <span id="place-name" class="title"></span><br>
+          <span id="place-address"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="container-fluid center">
+    <i class="fa fa-facebook-square fa-3x" aria-hidden="false"></i>
+    <i class="fa fa-twitter-square fa-3x" aria-hidden="false"></i>
+    <i class="fa fa-instagram fa-3x" aria-hidden="false"></i>
+  </footer>
+
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!-- Google Maps API -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB4ulIzhXIh25aDHSPhreILARR-6-AoSs&libraries=places&callback=initMap"
+    async defer>
+  </script>
+</body>
+
+</html>
