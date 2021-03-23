@@ -1,4 +1,4 @@
-# <a href="https://thestarvingcoder.github.io/modesto_tourism/index.html">California Tourism</a>
+# <a href="https://horseshoedev.github.io/travel-website/">California Tourism</a>
 
 ## A single tourism page for people visiting California using Google Maps & Places API as well as OpenWeather API
 
